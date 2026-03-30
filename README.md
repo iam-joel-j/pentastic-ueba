@@ -1,112 +1,76 @@
-﻿# pentastic-ueba
-# Pentastic-UEBA 🔐
-
-Pentastic-UEBA is an AI-powered Insider Threat Early Warning and Response System designed to monitor, detect, predict, and prevent malicious activities performed by internal and privileged users in banking environments.
+# 🔐 Pentastic — Insider Threat Detection using UEBA & Deception
 
 ---
 
-## 🚀 Overview
-
-In modern banking systems, insider threats pose a significant risk due to privileged access and lack of real-time monitoring. Traditional rule-based systems fail to detect evolving threats and often generate high false positives.
-
-Pentastic-UEBA addresses this challenge by combining **User and Entity Behavior Analytics (UEBA)**, **Machine Learning**, **Deception Technology**, and **Automated Response (SOAR)** into a unified system.
-
-The platform continuously monitors user activities such as login behavior, access patterns, device usage, and transaction history. It builds behavioral baselines for each user and detects deviations in real time.
-
-An advanced AI layer predicts the probability of future malicious actions such as fraud, data theft, and privilege abuse. A dynamic risk scoring engine evaluates user behavior and assigns risk levels accordingly.
-
-When a user is identified as high-risk, the system activates an **adaptive deception layer**, exposing honey tokens (fake credentials, files, APIs) and a **honey desktop** (a fully simulated admin environment) to confirm malicious intent.
-
-Once confirmed, the system triggers automated response actions such as blocking the user, terminating sessions, isolating systems, and notifying the security team.
+## 📖 Definition
+Pentastic is a cybersecurity system designed to detect and prevent insider threats using User and Entity Behavior Analytics (UEBA) combined with Deception Technology.  
+It identifies abnormal user behavior, evaluates risk, and confirms malicious intent through controlled deception.
 
 ---
 
-## 🔥 Key Features
-
-- 🧠 **UEBA-Based Behavior Analysis**  
-  Learns normal user behavior and detects deviations in real time  
-
-- 🔮 **AI-Powered Threat Prediction**  
-  Predicts insider threats such as fraud, data theft, and privilege abuse  
-
-- ⚠️ **Real-Time Anomaly Detection**  
-  Identifies unusual activities like off-hours access and bulk data downloads  
-
-- 📊 **Dynamic Risk Scoring Engine**  
-  Assigns risk levels (low to high) based on behavior and predictions  
-
-- 🍯 **Adaptive Deception Layer**  
-  Uses honey tokens (fake files, credentials) and honey desktop to confirm intent  
-
-- ⚡ **SOAR-Based Automated Response**  
-  Automatically blocks users, terminates sessions, and alerts SOC teams  
-
-- 📈 **Explainable Dashboard**  
-  Provides insights, alerts, and reasoning for detected threats  
+## 📌 Overview
+Traditional security systems focus on external threats, but insider attacks are harder to detect.  
+Pentastic monitors user activities in real-time, assigns risk scores, and triggers a deception environment when suspicious behavior is detected.
 
 ---
 
-## 🛠️ Technology Stack
-
-- **Backend:** Python (Flask)  
-- **Frontend:** HTML, CSS, JavaScript  
-- **Machine Learning:** Scikit-learn / AI models  
-- **Data Processing:** Apache Kafka (for real-time streaming)  
-- **Database:** MySQL / MongoDB  
+## 🚀 Key Features
+- 🔍 Real-time user activity monitoring  
+- 🧠 Risk-based anomaly detection  
+- 📊 Interactive dashboard visualization  
+- 🕵️ Honey Desktop (deception environment)  
+- 🔐 Secure log transmission (SHA256)  
+- 🔗 Tamper-proof logging (hash chaining)  
+- 🚨 Insider attack detection and blocking  
 
 ---
 
-## ⚙️ System Workflow
+## 🛠️ Tech Stack
+Backend:  
+- Python (Flask)  
+- SQLite  
 
-1. **Data Collection**  
-   Collect user activity logs (login time, IP, device, access logs)
+Frontend:  
+- React.js  
+- Tailwind CSS  
+- Recharts  
 
-2. **Behavior Analysis (UEBA)**  
-   Build baseline profiles and compare with peer behavior
+Security:  
+- SHA256 hashing  
+- Secure API validation  
+- Tamper-proof log storage  
 
-3. **AI Prediction Layer**  
-   Predict probability of insider threats
+---
 
-4. **Anomaly Detection**  
-   Identify suspicious activities in real time
-
-5. **Risk Scoring**  
-   Assign dynamic risk score to each user
-
-6. **Deception Activation**  
-   Expose honey tokens and honey desktop for high-risk users
-
-7. **Threat Confirmation**  
-   Interaction with deception confirms malicious intent
-
-8. **Automated Response (SOAR)**  
-   Block user, terminate session, isolate system, alert SOC
-
-9. **Dashboard Visualization**  
-   Display alerts, risk scores, and explanations
+## 🔄 System Workflow
+1. User performs actions (login, file access, etc.)  
+2. Log agent collects activity data  
+3. Logs are securely sent to backend  
+4. Risk engine evaluates behavior  
+5. Dashboard displays user risk status  
+6. If high risk → user redirected to Honey Desktop  
+7. Interaction with decoy files → user blocked and alert generated  
 
 ---
 
 ## 🎯 Use Cases
-
-- Banking and financial institutions  
-- Insider threat detection  
-- Fraud prevention systems  
-- Privileged access monitoring  
-- Enterprise security operations  
-
----
-
-## 📈 Future Enhancements
-
-- Integration with SIEM tools (Splunk, ELK)  
-- Advanced deep learning models for prediction  
-- Real-time streaming improvements with Kafka  
-- Enhanced visualization dashboards  
-- Cloud deployment (AWS/Azure)  
+- Enterprise insider threat detection  
+- Employee activity monitoring  
+- Prevention of data leakage  
+- Cybersecurity training and simulations  
+- Government and defense systems  
 
 ---
 
-## 🏆 Conclusion
+## 🔮 Future Enhancements
+- 🤖 Machine learning-based anomaly detection  
+- 📊 Behavioral baseline modeling per user  
+- 🔗 Integration with SIEM tools  
+- 📡 Real-time OS-level monitoring agent  
+- 🌐 Cloud-based deployment  
 
-Pentastic-UEBA provides a proactive and intelligent cybersecurity solution by combining **prediction, detection, deception, and automated response**. It ensures insider threats are identified early, validated accurately, and prevented before causing real damage.
+---
+
+## 📌 Conclusion
+Pentastic provides an effective solution for detecting insider threats by combining behavior analysis, secure logging, and deception techniques.  
+It not only identifies suspicious activity but also confirms malicious intent, ensuring stronger and smarter internal security.
